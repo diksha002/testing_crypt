@@ -15,8 +15,7 @@ public = RSA.importKey(pub)
 #dechiffrage
 #data/file to decrypt
 with open('crypted.txt','rb') as f:
-	data = f.read()
-	x = privat.decrypt(data)
+	x = privat.decrypt(f.read())
 	x = x.decode('utf-8')
 
 #saves the decrypted msg in decrypted.txt
